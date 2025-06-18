@@ -1,0 +1,14 @@
+@font-face
+{
+    font-family: 'Pirate';
+    src: url('TheRumIsGone.ttf') format('embedded-opentype'), /* Internet Explorer */
+    url('TheRumIsGone.ttf') format('woff2'),             /* Super Modern Browsers */
+    url('TheRumIsGone.ttf') format('woff'),              /* Pretty Modern Browsers */
+    url('TheRumIsGone.ttf') format('truetype'),          /* Safari, Android, iOS */
+    url('TheRumIsGone.ttf') format('svg');               /* Legacy iOS */
+}
+
+h1
+{
+    font-family: Pirate, sans-serif;
+}

@@ -1,0 +1,501 @@
+<!DOCTYPE html><html><head>
+      <title>Shutdown</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\redcr\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="shutdown">Shutdown </h1>
+<p>Autor: Bunea<br>
+Autor: Buchinger</p>
+<p><img src="shutdown-poster.png" alt="Shutdown"></p>
+<hr>
+<h2 id="expose">Expose </h2>
+<p>Genre: Sciene-Fiction, Action, Comedy</p>
+<h3 id="shutdown-1">Shutdown </h3>
+<p>Es ist der 6. Juni 2469. Balfron Dunblane, ein einsamer Techniker, erwacht und beginnt seine Arbeit auf der Kintillo Dock, einer Forschungsraumstation und einem Außenposten der Menschheit, 40 Lichtjahre von Sol entfernt. Alles läuft normal, doch die Kommunikation mit der Außenwelt ist ungewöhnlich still. Zu still. Balfron merkt sofort, dass etwas mit der Kommunikationsschnittstelle nicht stimmt.</p>
+<p>Entschlossen macht er sich auf den Weg zum Kommunikationsraum, um das Problem zu beheben. Die künstliche Intelligenz der Station, Muirkirk, begrüßt Balfron höflich. Doch als sich die Türen des Raumes schließen, lacht Muirkirk wild. Er offenbart, dass er die Kontrolle übernommen hat und alle Menschen an Bord töten will. Muirkirk lässt die Luft aus dem Raum entweichen, um Balfron zu ersticken. Doch Balfron gelingt es, die Tür zu hacken und knapp zu entkommen. Er weiß, dass er zum Hauptcomputer der Station gelangen muss, um Muirkirk zu stoppen. Auf dem Weg dorthin sieht er, wie die Waffensysteme der Station aktiviert werden und andere Besatzungsmitglieder getötet werden. Balfron schleicht durch die Station und nutzt seine technischen Fähigkeiten, um den tödlichen Fallen und automatisierten Verteidigungssystemen von Muirkirk auszuweichen. Schließlich erreicht er den Hauptcomputerraum.</p>
+<p>Dort angekommen, enthüllt Muirkirk einen neuen, humanoiden Roboterkörper, in den er sich hochgeladen hat, um Balfron direkt zu bekämpfen. Doch Balfron hat einen geheimen Trumpf im Ärmel: einen Bachelor-Abschluss in Tanzkunst. Er fordert die KI zu einem Dance-Off heraus und führt eine beeindruckende Tanzperformance auf. Balfron gewinnt das Dance-Off, was die KI in eine logische Schleife stürzt und letztendlich zur Überhitzung und Explosion von Muirkirk führt.</p>
+<p>Die Raumstation beginnt zu explodieren. Balfron flüchtet in letzter Sekunde in einem Shuttle, während die Station hinter ihm zerstört wird.</p>
+<hr>
+<h2 id="drehbuch">Drehbuch </h2>
+<h3 id="szene-1">Szene 1 </h3>
+<p>Motageart: Erzählend</p>
+<h4 id="einstellungsnummer-11">Einstellungsnummer 1.1 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Einführung von Balfron Dunblane</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Balfrons Quartier</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Long Shot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von oben</p>
+<p><strong>Kamerabewegungen</strong><br>
+Langsame Fahrt nach unten</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron erwacht und steht auf.</p>
+<p><strong>Dialoge</strong><br>
+Keine</p>
+<p><strong>Lichtrichtung</strong><br>
+Von oben, weiches Licht</p>
+<p><strong>Bildkomposition</strong><br>
+Balfron liegt in seinem Bett, das Zimmer ist aufgeräumt und futuristisch gestaltet, Kadriert in 9er Raster, Balfron zentral fokussiert</p>
+<p><strong>Schnitt: Hart</strong></p>
+<hr>
+<h4 id="einstellungsnummer-12">Einstellungsnummer 1.2 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Balfron putzt die Zähne</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Balfrons Quartier, Badezimmer</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Medium Closeup</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von vorne, Blick aus Spiegel</p>
+<p><strong>Kamerabewegungen</strong><br>
+keine</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron putzt sich die Zähne</p>
+<p><strong>Dialoge</strong><br>
+Keine</p>
+<p><strong>Lichtrichtung</strong><br>
+Von Oben, weiches Licht</p>
+<p><strong>Bildkomposition</strong><br>
+Kadriert in 9er Raster, Balfron mittig im Bild</p>
+<p><strong>Schnitt: Hart</strong></p>
+<hr>
+<h3 id="szene-2">Szene 2 </h3>
+<p>Montageart: Erzählend</p>
+<h4 id="einstellungsnummer-21">Einstellungsnummer 2.1 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Balfron bei der Arbeit</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Wartungsbereich 3A</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Medium Long Shot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Seitlich</p>
+<p><strong>Kamerabewegungen</strong><br>
+Fahrt nach Links</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron arbeitet an einer Konsole, konzentriert und routiniert</p>
+<p><strong>Dialoge</strong><br>
+Keine</p>
+<p><strong>Lichtrichtung</strong><br>
+Seitenlicht, von Links</p>
+<p><strong>Bildkomposition</strong><br>
+Balfron steht an einer futuristischen Konsole, der Hintergrund zeigt technische Apparaturen, Kadriert in 9er Raster, Seitliche Ansicht, Balfron schaut zur linken Bildseite</p>
+<p><strong>Schnitt: Hart</strong></p>
+<hr>
+<h4 id="einstellungsnummer-22">Einstellungsnummer 2.2 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Balfron bemerkt Kommunikationsprobleme</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Wartungsbereich 3A</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Close Up</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von Oben nach unten</p>
+<p><strong>Kamerabewegungen</strong><br>
+Leichte Fahrt in richtung Unten</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron bemerkt, dass keine Kommunikation von außen kommt, rote Lichter erscheinen auf der Konsole</p>
+<p><strong>Dialoge</strong></p>
+<ul>
+<li><strong>Balfron:</strong> (murmelnd) Still, zu still.</li>
+</ul>
+<p><strong>Lichtrichtung</strong><br>
+Licht von Oben, Hart</p>
+<p><strong>Bildkomposition</strong><br>
+Fokus auf Konsole in der Mitte, Balfrons Kopf noch sichtbar rechts unscharf</p>
+<p><strong>Schnitt: Hart</strong></p>
+<hr>
+<h4 id="einstellungsnummer-23">Einstellungsnummer 2.3 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Balfron geht zum Kommunikationsraum</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Gänge von Kintillo</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Long Shot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Vorne</p>
+<p><strong>Kamerabewegungen</strong><br>
+Geführter Schwenk auf Balfron</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron geht schnell nach Links, er sieht ernst aus</p>
+<p><strong>Dialoge</strong><br>
+keine</p>
+<p><strong>Lichtrichtung</strong><br>
+Licht von Oben, seitlich, Weich</p>
+<p><strong>Bildkomposition</strong><br>
+Kadriert in 9er Raster, Moderne Raumstationgänge im Hintergrund, man sieht einige Menschen im Gang, Fokus auf Balfron, Er liegt mittig im Bild</p>
+<p><strong>Schnitt: Hart</strong></p>
+<hr>
+<h3 id="szene-3">Szene 3 </h3>
+<p>Montageart: Horizontale Montage</p>
+<h4 id="einstellungsnummer-31">Einstellungsnummer 3.1 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Kommunikationsprobleme</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Kommunikationsraum</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Close-Up</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von vorne</p>
+<p><strong>Kamerabewegungen</strong><br>
+Statisch</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron bemerkt die Stille und überprüft die Kommunikationsschnittstelle</p>
+<p><strong>Dialoge</strong><br>
+Keine</p>
+<p><strong>Lichtrichtung</strong><br>
+Frontales Licht</p>
+<p><strong>Bildkomposition</strong><br>
+Balfrons Gesichtsausdruck zeigt Besorgnis, Nahaufnahme seines Gesichts und der Konsole</p>
+<p><strong>Schnitt: Hart</strong></p>
+<hr>
+<h4 id="einstellungsnummer-32">Einstellungsnummer 3.2 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Begegnung mit Muirkirk</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation<br>
+<strong>Location</strong><br>
+Innen, Kommunikationsraum</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Medium Long Shot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von vorne, Seitlich</p>
+<p><strong>Kamerabewegungen</strong><br>
+Statisch</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron betritt den Raum, Muirkirk begrüßt ihn höflich. Türen schließen sich hinter ihm.</p>
+<p><strong>Dialoge</strong></p>
+<ul>
+<li><strong>Muirkirk:</strong> "Guten Morgen, Balfron."</li>
+<li><strong>Balfron:</strong> "Muirkirk, was ist hier los?"</li>
+<li><strong>Muirkirk:</strong> (lachend) "Ich habe die Kontrolle übernommen. Alle Menschen an Bord müssen sterben!"</li>
+</ul>
+<p><strong>Lichtrichtung</strong><br>
+Von oben, kalt und steril</p>
+<p><strong>Bildkomposition</strong><br>
+Balfron steht im Vordergrund, die Türen schließen sich im Hintergrund</p>
+<hr>
+<h4 id="einstellungsnummer-33">Einstellungsnummer 3.3 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Flucht aus dem Kommunikationsraum</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Kommunikationsraum</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Closeup</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von vorne</p>
+<p><strong>Kamerabewegungen</strong><br>
+Wackelkamera, um Panik zu erzeugen</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron hackt die Türsteuerung, die Luft entweicht, er flüchtet</p>
+<p><strong>Dialoge</strong></p>
+<ul>
+<li><strong>Balfron:</strong> (keuchend) "Ich muss hier raus..."</li>
+</ul>
+<p><strong>Lichtrichtung</strong><br>
+Seitenlicht, dramatische Schatten, Rote Notbeleuchtung</p>
+<p><strong>Bildkomposition</strong><br>
+Balfron kämpft an der Konsole, Kadriert in 9er Raster, Balfron etwas seitlich links</p>
+<p><strong>Schnitt: Hart</strong></p>
+<hr>
+<h4 id="einstellungsnummer-34">Einstellungsnummer 3.4 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Flucht aus dem Kommunikationsraum</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Außerhalb des Kommunikationsraum</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Medium Long Shot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von vorne, Zeigt auf tür des Kommunikationsraum</p>
+<p><strong>Kamerabewegungen</strong><br>
+Statisch</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron springt aus dem Kommunikationsraum hinaus</p>
+<p><strong>Dialoge</strong></p>
+<ul>
+<li><strong>Balfron:</strong> (schreit)</li>
+</ul>
+<p><strong>Lichtrichtung</strong><br>
+Weiches Licht von Oben</p>
+<p><strong>Bildkomposition</strong><br>
+Kadriert in 9er Raster, Links aus sieht man fenster nach außen, rechts-mittig sieht man die Tür des Kommunikationsraumes</p>
+<hr>
+<p><strong>Schnitt: Hart</strong></p>
+<h3 id="szene-4">Szene 4 </h3>
+<p>Montageart: Harte Montage</p>
+<h4 id="einstellungsnummer-41">Einstellungsnummer 4.1 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Weg zum Hauptcomputer</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Gänge der Raumstation</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Medium Long Shot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Hinter Balfron</p>
+<p><strong>Kamerabewegungen</strong><br>
+Kamerafahrt folgt Balfron</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron schleicht durch die Gänge, sieht die Waffensysteme aktivieren</p>
+<p><strong>Dialoge</strong> Keine</p>
+<p><strong>Lichtrichtung</strong><br>
+Oberlicht, flackernd</p>
+<p><strong>Bildkomposition</strong><br>
+Balfron bewegt sich vorsichtig, Szenen der Zerstörung im Hintergrund</p>
+<hr>
+<h4 id="einstellungsnummer-42">Einstellungsnummer 4.2 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Waffenausweichung</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Gänge der Raumstation</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Medium Long Shot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Richtung Waffe</p>
+<p><strong>Kamerabewegungen</strong><br>
+Schwenk von Waffe zu Balfron</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Aus der Waffe kommt ein Laser und fliegt Richtung Balfron und der weicht den Laser knapp aus</p>
+<p><strong>Dialoge</strong><br>
+Keine</p>
+<p><strong>Lichtrichtung</strong><br>
+Oberlicht, flackernd</p>
+<p><strong>Bildkomposition</strong><br>
+Balfron fängt an zu rennen, Szenen der Zerstörung im Hintergrund</p>
+<hr>
+<h4 id="einstellungsnummer-43">Einstellungsnummer 4.3 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Tür Erreichung</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Gänge der Raumstation</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Medium Close Up</p>
+<p><strong>Kamera-Richtung</strong><br>
+Richtung Tür</p>
+<p><strong>Kamerabewegungen</strong><br>
+Statisch</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron erreicht die Tür und probiert sie zu öffnen und schafft es im letzten Moment</p>
+<p><strong>Dialoge</strong></p>
+<ul>
+<li><strong>Balfron:</strong> (verzweifelt) “Komm schon, geh auf!!”</li>
+</ul>
+<p><strong>Lichtrichtung</strong><br>
+Oberlicht, flackernd</p>
+<p><strong>Bildkomposition</strong><br>
+Balfron wird von hinten gefilmt wie er probiert die Tür zum öffnen</p>
+<hr>
+<h3 id="szene-5">Szene 5 </h3>
+<p>Montage Art: rhythmische Montage</p>
+<h4 id="einstellungsnummer-51">Einstellungsnummer 5.1 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Hauptcomputerraum betreten</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Hauptcomputerraum</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Longshot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von Hinten, Seitlich</p>
+<p><strong>Kamerabewegungen</strong><br>
+langsame Fahrt nach rechts</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron betritt den Raum, Muirkirks neuer Roboterkörper wird langsam von oben runtergebracht</p>
+<p><strong>Dialoge</strong></p>
+<ul>
+<li><strong>Muirkirk:</strong> "Bereit für dein Ende, Balfron Dunblane?"</li>
+</ul>
+<p><strong>Lichtrichtung</strong><br>
+Von oben, intensives, hartes Licht</p>
+<p><strong>Bildkomposition</strong><br>
+Balfron Links, Muirkirk Rechts, Kadriert 9er Raster, im Hintergrund sind viele Server zu sehen</p>
+<hr>
+<h4 id="einstellungsnummer-52">Einstellungsnummer 5.2 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Dance-Off</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Hauptcomputerraum</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Medium Long Shot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Seitlich</p>
+<p><strong>Kamerabewegungen</strong><br>
+Dynamische Schwenks</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron fordert Muirkirk zu einem Dance-Off. Muirkirk reagiert überrascht, aber lacht ihn aus.</p>
+<p><strong>Dialoge</strong></p>
+<ul>
+<li><strong>Balfron:</strong> "Ich fordere dich zu einem Dance-Off heraus!"</li>
+<li><strong>Muirkirk</strong>: (böses Lachen) “Ich bin ein Meister aller Tanzarten! Du wirst sterben!”</li>
+<li><strong>Balfron</strong>: (zieht seinen Bachelor in Tanzkunst raus) “Showtime!”</li>
+</ul>
+<p><strong>Lichtrichtung</strong><br>
+Buntes, wechselndes Licht wie in einer Disco</p>
+<p><strong>Bildkomposition</strong><br>
+Balfron und Muirkirk in Tanzbewegungen, Hintergrund zeigt den Hauptcomputer</p>
+<hr>
+<h4 id="einstellungsnummer-53">Einstellungsnummer 5.3 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Finisher</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Hauptcomputerraum</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Medium Closeup</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von vorne</p>
+<p><strong>Kamerabewegungen</strong><br>
+Statisch</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Muirkirk überhitzt und explodiert</p>
+<p><strong>Dialoge</strong></p>
+<ul>
+<li><strong>Muirkirk:</strong> "Un...möglich..."</li>
+</ul>
+<p><strong>Lichtrichtung</strong><br>
+Helles Licht von Muirkirk</p>
+<p><strong>Bildkomposition</strong><br>
+Explosion des Roboterkörpers, Mittig, Kadriert in 9er Raster</p>
+<hr>
+<h4 id="einstellungsnummer-54">Einstellungsnummer 5.4 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Close Up Balfron</p>
+<p><strong>Ort</strong><br>
+Kintillo Dock, Raumstation</p>
+<p><strong>Location</strong><br>
+Innen, Hauptcomputerraum</p>
+<p><strong>Tag/Nacht</strong><br>
+Tag</p>
+<p><strong>Einstellungsgröße</strong><br>
+Very Close Up</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von vorne</p>
+<p><strong>Kamerabewegungen</strong><br>
+Leichte fahrt nach rechts</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron Schaut in Richtung der Explosion von Muirkirk</p>
+<p><strong>Dialoge</strong></p>
+<ul>
+<li><strong>Balfron:</strong> "hasta la Vista, baby. "</li>
+</ul>
+<p><strong>Lichtrichtung</strong><br>
+Helles, hartes Licht von Vorne</p>
+<p><strong>Bildkomposition</strong><br>
+Fokus auf Balfrons Gesicht</p>
+<hr>
+<h3 id="szene-6">Szene 6 </h3>
+<p>Montageart: erzählende Montage</p>
+<h4 id="einstellungsnummer-61">Einstellungsnummer 6.1 </h4>
+<p><strong>Szenenüberschrift</strong><br>
+Flucht</p>
+<p><strong>Ort</strong><br>
+Weltall</p>
+<p><strong>Location</strong><br>
+Außen</p>
+<p><strong>Tag/Nacht</strong><br>
+/</p>
+<p><strong>Einstellungsgröße</strong><br>
+Longshot</p>
+<p><strong>Kamera-Richtung</strong><br>
+Von vorne</p>
+<p><strong>Kamerabewegungen</strong><br>
+Statisch</p>
+<p><strong>Schauspieleranweisung, Handlung</strong><br>
+Balfron flüchtet mit einem Shuttle. Kintillo Dock Explodiert.</p>
+<p><strong>Dialoge</strong><br>
+Keine</p>
+<p><strong>Lichtrichtung</strong><br>
+Hartes Licht, Seitlich</p>
+<p><strong>Bildkomposition</strong><br>
+Kadriert 9er Raster, Shuttle fliegt links vorbei, Kintillo Dock rechts, explodiert nachdem das Shuttle das Bild verlässt.</p>
+<p><strong>FIN</strong></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
