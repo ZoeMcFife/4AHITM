@@ -1,0 +1,16 @@
+Arbeitsschritte:
+- Projekt anlegen
+- Footage laden in den Project Bin
+- Footage Videoformate analysieren
+- Footage sichten
+- Footage im Quellmonitor trimmen
+- Footage in neuer Sequenz anordnen: 1920x1080 square pix, 25 fps progressive
+- Harte Schnitte einfügen, Trimmen und verschieben, Clips tauschen (strg)
+- Intro Earthzoom mit VFX in Videospur 2 
+- Weiche Blenden einfügen an beliebiger Stelle
+- Schwarzblende am Beginn und Ende der Sequenz
+- Titel am Beginn einfügen, Outro mit Titel erstellen
+- Bei einem Clip Tempo anpassen
+- Photoshop-Datei platzieren (Bauchbinde)
+- Lumetri Farbkorrektur nach Neutralkorrektur der Clips in einer nested sequence
+- Export des Materials
